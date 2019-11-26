@@ -9,7 +9,10 @@ sourcefiles={"*.dtx"}
 installfiles={"*.sty","*.lua"}
 scriptfiles={"*.lua"}
 
- 
+tdslocations={
+"doc/latex/oberdiek/example-mycolorsetup.sty"
+}
+
 packtdszip  = true
 
 maxprintline=10000

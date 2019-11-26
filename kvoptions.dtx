@@ -1,13 +1,13 @@
 % \iffalse meta-comment
 %
 % File: kvoptions.dtx
-% Version: 2016/05/16 v3.12
+% Version: 2019/12/15 v3.13
 % Info: Key value format for package options
 %
 % Copyright (C)
 %    2004, 2006, 2007, 2009-2011 Heiko Oberdiek
 %    2016-2019 Oberdiek Package Support Group
-%    https://github.com/ho-tex/oberdiek/issues
+%    https://github.com/ho-tex/kvoptions/issues
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either
@@ -23,7 +23,7 @@
 %
 % The Current Maintainers of this work are
 % Heiko Oberdiek and the Oberdiek Package Support Group
-% https://github.com/ho-tex/oberdiek/issues
+% https://github.com/ho-tex/kvoptions/issues
 %
 % This work consists of the main source file kvoptions.dtx
 % and the derived files
@@ -34,8 +34,8 @@
 %    kvoptions-test4.sty.
 %
 % Distribution:
-%    CTAN:macros/latex/contrib/oberdiek/kvoptions.dtx
-%    CTAN:macros/latex/contrib/oberdiek/kvoptions.pdf
+%    CTAN:macros/latex/contrib/kvoptions/kvoptions.dtx
+%    CTAN:macros/latex/contrib/kvoptions/kvoptions.pdf
 %
 % Unpacking:
 %    (a) If kvoptions.ins is present:
@@ -64,16 +64,11 @@
 %       pdflatex kvoptions.dtx
 %
 % Installation:
-%    TDS:tex/latex/oberdiek/kvoptions.sty
-%    TDS:tex/latex/oberdiek/kvoptions-patch.sty
-%    TDS:doc/latex/oberdiek/kvoptions.pdf
-%    TDS:doc/latex/oberdiek/example-mycolorsetup.sty
-%    TDS:doc/latex/oberdiek/test/kvoptions-test1.tex
-%    TDS:doc/latex/oberdiek/test/kvoptions-test2.tex
-%    TDS:doc/latex/oberdiek/test/kvoptions-test3.tex
-%    TDS:doc/latex/oberdiek/test/kvoptions-test4.tex
-%    TDS:doc/latex/oberdiek/test/kvoptions-test4.sty
-%    TDS:source/latex/oberdiek/kvoptions.dtx
+%    TDS:tex/latex/kvoptions/kvoptions.sty
+%    TDS:tex/latex/kvoptions/kvoptions-patch.sty
+%    TDS:doc/latex/kvoptions/kvoptions.pdf
+%    TDS:doc/latex/kvoptions/example-mycolorsetup.sty
+%    TDS:source/latex/kvoptions/kvoptions.dtx
 %
 %<*ignore>
 \begingroup
@@ -90,7 +85,7 @@
 \input docstrip.tex
 \Msg{************************************************************************}
 \Msg{* Installation}
-\Msg{* Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)}
+\Msg{* Package: kvoptions 2019/12/15 v3.13 Key value format for package options (HO)}
 \Msg{************************************************************************}
 
 \keepsilent
@@ -102,7 +97,7 @@
 This is a generated file.
 
 Project: kvoptions
-Version: 2016/05/16 v3.12
+Version: 2019/12/15 v3.13
 
 Copyright (C)
    2004, 2006, 2007, 2009-2011 Heiko Oberdiek
@@ -122,7 +117,7 @@ This work has the LPPL maintenance status "maintained".
 
 The Current Maintainers of this work are
 Heiko Oberdiek and the Oberdiek Package Support Group
-https://github.com/ho-tex/oberdiek/issues
+https://github.com/ho-tex/kvoptions/issues
 
 
 This work consists of the main source file kvoptions.dtx
@@ -139,12 +134,12 @@ and the derived files
 \generate{%
   \file{kvoptions.ins}{\from{kvoptions.dtx}{install}}%
   \file{kvoptions.drv}{\from{kvoptions.dtx}{driver}}%
-  \usedir{tex/latex/oberdiek}%
+  \usedir{tex/latex/kvoptions}%
   \file{kvoptions.sty}{\from{kvoptions.dtx}{package}}%
   \file{kvoptions-patch.sty}{\from{kvoptions.dtx}{patch}}%
-  \usedir{doc/latex/oberdiek}%
+  \usedir{doc/latex/kvoptions}%
   \file{example-mycolorsetup.sty}{\from{kvoptions.dtx}{example}}%
-%  \usedir{doc/latex/oberdiek/test}%
+%  \usedir{doc/latex/kvoptions/test}%
 %  \file{kvoptions-test1.tex}{\from{kvoptions.dtx}{test1}}%
 %  \file{kvoptions-test2.tex}{\from{kvoptions.dtx}{test2}}%
 %  \file{kvoptions-test3.tex}{\from{kvoptions.dtx}{test3}}%
@@ -152,7 +147,7 @@ and the derived files
 %  \file{kvoptions-test4.sty}{\from{kvoptions.dtx}{test4pkg}}%
   \nopreamble
   \nopostamble
-%  \usedir{source/latex/oberdiek/catalogue}%
+%  \usedir{source/latex/kvoptions/catalogue}%
 %  \file{kvoptions.xml}{\from{kvoptions.dtx}{catalogue}}%
 }
 
@@ -180,7 +175,7 @@ and the derived files
 %<*driver>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesFile{kvoptions.drv}%
-  [2016/05/16 v3.12 Key value format for package options (HO)]%
+  [2019/12/15 v3.13 Key value format for package options (HO)]%
 \documentclass{ltxdoc}
 \usepackage{holtxdoc}[2011/11/22]
 \begin{document}
@@ -209,9 +204,9 @@ and the derived files
 % \GetFileInfo{kvoptions.drv}
 %
 % \title{The \xpackage{kvoptions} package}
-% \date{2016/05/16 v3.12}
+% \date{2019/12/15 v3.13}
 % \author{Heiko Oberdiek\thanks
-% {Please report any issues at \url{https://github.com/ho-tex/oberdiek/issues}}}
+% {Please report any issues at \url{https://github.com/ho-tex/kvoptions/issues}}}
 %
 % \maketitle
 %
@@ -776,7 +771,7 @@ and the derived files
     % Package identification
     % -----------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{example-mycolorsetup}[2016/05/16 Managing my colors]
+\ProvidesPackage{example-mycolorsetup}[2019/12/15 Managing my colors]
 
 \RequirePackage{ifpdf}
 \RequirePackage{kvoptions}
@@ -1159,7 +1154,7 @@ and the derived files
   \fi
 \expandafter\x\csname ver@kvoptions.sty\endcsname
 \ProvidesPackage{kvoptions}%
-  [2016/05/16 v3.12 Key value format for package options (HO)]%
+  [2019/12/15 v3.13 Key value format for package options (HO)]%
 %    \end{macrocode}
 %
 % \paragraph{Catcodes}
@@ -1264,7 +1259,7 @@ and the derived files
 %    \begin{macrocode}
 \DeclareOption{patch}{%
   \AtEndOfPackage{%
-    \RequirePackage{kvoptions-patch}[2016/05/16]%
+    \RequirePackage{kvoptions-patch}[2019/12/15]%
   }%
 }
 %    \end{macrocode}
@@ -2293,7 +2288,7 @@ and the derived files
 \TMP@EnsureCode{124}{12}% |
 \edef\KVO@AtEnd{\KVO@AtEnd\noexpand\endinput}
 \ProvidesPackage{kvoptions-patch}%
-  [2016/05/16 v3.12 LaTeX patch for keyval options (HO)]%
+  [2019/12/15 v3.13 LaTeX patch for keyval options (HO)]%
 %    \end{macrocode}
 %
 %    Check for \eTeX.
@@ -2965,7 +2960,7 @@ and the derived files
 %<*test3>
 \NeedsTeXFormat{LaTeX2e}
 \makeatletter
-\RequirePackage{kvoptions}[2016/05/16]
+\RequirePackage{kvoptions}[2019/12/15]
 \def\msg#{\immediate\write16}
 \define@key{testfamily}{testkey}{%
   \msg{[testfamily/testkey/#1]}%
@@ -3005,8 +3000,8 @@ and the derived files
 %    \begin{macrocode}
 %<*test4pkg>
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{kvoptions-test4}[2016/05/16 package for testing]
-\RequirePackage{kvoptions}[2016/05/16]
+\ProvidesPackage{kvoptions-test4}[2019/12/15 package for testing]
+\RequirePackage{kvoptions}[2019/12/15]
 \SetupKeyvalOptions{%
   family=FOO,%
   prefix=foo,%
@@ -3025,10 +3020,10 @@ and the derived files
 %    \begin{macrocode}
 %<*test4>
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesFile{kvoptions-test4.tex}[2016/05/16 test file]
+\ProvidesFile{kvoptions-test4.tex}[2019/12/15 test file]
 \RequirePackage[%
   str=A,set=B,str=C,%
-]{kvoptions-test4}[2016/05/16]
+]{kvoptions-test4}[2019/12/15]
 \def\TestExpected{C}
 \ifx\foostr\TestExpected
   \typeout{* Test ok.}%
@@ -3048,17 +3043,17 @@ and the derived files
 % \paragraph{Package.} This package is available on
 % CTAN\footnote{\CTANpkg{kvoptions}}:
 % \begin{description}
-% \item[\CTAN{macros/latex/contrib/oberdiek/kvoptions.dtx}] The source file.
-% \item[\CTAN{macros/latex/contrib/oberdiek/kvoptions.pdf}] Documentation.
+% \item[\CTAN{macros/latex/contrib/kvoptions/kvoptions.dtx}] The source file.
+% \item[\CTAN{macros/latex/contrib/kvoptions/kvoptions.pdf}] Documentation.
 % \end{description}
 %
 %
-% \paragraph{Bundle.} All the packages of the bundle `oberdiek'
+% \paragraph{Bundle.} All the packages of the bundle `kvoptions'
 % are also available in a TDS compliant ZIP archive. There
 % the packages are already unpacked and the documentation files
 % are generated. The files and directories obey the TDS standard.
 % \begin{description}
-% \item[\CTANinstall{install/macros/latex/contrib/oberdiek.tds.zip}]
+% \item[\CTANinstall{install/macros/latex/contrib/kvoptions.tds.zip}]
 % \end{description}
 % \emph{TDS} refers to the standard ``A Directory Structure
 % for \TeX\ Files'' (\CTAN{tds/tds.pdf}). Directories
@@ -3066,15 +3061,15 @@ and the derived files
 %
 % \subsection{Bundle installation}
 %
-% \paragraph{Unpacking.} Unpack the \xfile{oberdiek.tds.zip} in the
+% \paragraph{Unpacking.} Unpack the \xfile{kvoptions.tds.zip} in the
 % TDS tree (also known as \xfile{texmf} tree) of your choice.
 % Example (linux):
 % \begin{quote}
-%   |unzip oberdiek.tds.zip -d ~/texmf|
+%   |unzip kvoptions.tds.zip -d ~/texmf|
 % \end{quote}
 %
 % \paragraph{Script installation.}
-% Check the directory \xfile{TDS:scripts/oberdiek/} for
+% Check the directory \xfile{TDS:scripts/kvoptions/} for
 % scripts that need further installation steps.
 %
 % \subsection{Package installation}
@@ -3092,16 +3087,11 @@ and the derived files
 % \begin{quote}
 % \def\t{^^A
 % \begin{tabular}{@{}>{\ttfamily}l@{ $\rightarrow$ }>{\ttfamily}l@{}}
-%   kvoptions.sty & tex/latex/oberdiek/kvoptions.sty\\
-%   kvoptions-patch.sty & tex/latex/oberdiek/kvoptions-patch.sty\\
-%   kvoptions.pdf & doc/latex/oberdiek/kvoptions.pdf\\
-%   example-mycolorsetup.sty & doc/latex/oberdiek/example-mycolorsetup.sty\\
-%   test/kvoptions-test1.tex & doc/latex/oberdiek/test/kvoptions-test1.tex\\
-%   test/kvoptions-test2.tex & doc/latex/oberdiek/test/kvoptions-test2.tex\\
-%   test/kvoptions-test3.tex & doc/latex/oberdiek/test/kvoptions-test3.tex\\
-%   test/kvoptions-test4.tex & doc/latex/oberdiek/test/kvoptions-test4.tex\\
-%   test/kvoptions-test4.sty & doc/latex/oberdiek/test/kvoptions-test4.sty\\
-%   kvoptions.dtx & source/latex/oberdiek/kvoptions.dtx\\
+%   kvoptions.sty & tex/latex/kvoptions/kvoptions.sty\\
+%   kvoptions-patch.sty & tex/latex/kvoptions/kvoptions-patch.sty\\
+%   kvoptions.pdf & doc/latex/kvoptions/kvoptions.pdf\\
+%   example-mycolorsetup.sty & doc/latex/kvoptions/example-mycolorsetup.sty\\
+%   kvoptions.dtx & source/latex/kvoptions/kvoptions.dtx\\
 % \end{tabular}^^A
 % }^^A
 % \sbox0{\t}^^A
@@ -3375,6 +3365,10 @@ and the derived files
 %     removes global options with equal signs.
 %   \end{Version}
 %   \begin{Version}{2016/05/16 v3.12}
+%   \item
+%     Documentation updates.
+%   \end{Version}
+%   \begin{Version}{2019/12/15 v3.13}
 %   \item
 %     Documentation updates.
 %   \end{Version}
