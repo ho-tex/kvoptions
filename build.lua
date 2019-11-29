@@ -10,7 +10,7 @@ installfiles={"*.sty","*.lua"}
 scriptfiles={"*.lua"}
 
 tdslocations={
-"doc/latex/oberdiek/example-mycolorsetup.sty"
+"doc/latex/kvoptions/example-mycolorsetup.sty"
 }
 
 packtdszip  = true
