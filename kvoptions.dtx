@@ -1056,7 +1056,19 @@ and the derived files
 % }
 %
 % \section{Implementation}
-%
+% \subsection{Disabling the patches for newer LaTeX}
+%  \xpackage{kvoptions-patch} is not compatible with \LaTeX{} 2020-10-01 and newer
+%  so it is disabled and issues a warning.
+%    \begin{macrocode}
+%<*patch>
+\providecommand\IfFormatAtLeastTF{\@ifl@t@r\fmtversion}
+\IfFormatAtLeastTF{2020/10/01}{\PackageWarning{kvoptions-patch}%
+ {kvoptions-patch is not compatible with \MessageBreak
+  LaTeX \fmtversion\MessageBreak Loading is aborted}{}}{}
+\IfFormatAtLeastTF{2020/10/01}{\endinput}{}
+%</patch>
+%    \end{macrocode}
+
 % \subsection{Preamble}
 %
 %    \begin{macrocode}
