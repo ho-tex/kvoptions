@@ -1,0 +1,18 @@
+\input{regression-test}
+\begin{filecontents}[overwrite]{foo-test.sty}
+\RequirePackageWithOptions{bar-test}
+\end{filecontents}
+\begin{filecontents}[overwrite]{bar-test.sty}
+\DeclareOption {quiet}     {}
+\ProcessOptions*
+\end{filecontents}
+\documentclass{article}
+\START
+\usepackage{kvoptions-patch}
+\usepackage[quiet]{foo-test}
+\show\x
+\END
+\begin{document}
+
+Test
+\end{document}
