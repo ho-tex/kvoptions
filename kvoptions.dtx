@@ -1976,7 +1976,7 @@ and the derived files
                 ,%
               }%
             \fi
-            \@expandtwoargs\@removeelement\KVO@CurrentOption
+            \@expandtwoargs\@removeelement{\expandafter\@remove@eq@value\KVO@CurrentOption=\@nil}%
               \@unusedoptionlist\@unusedoptionlist
           }{}%
         }%
@@ -3122,6 +3122,9 @@ and the derived files
 %   \begin{Version}{2020-10-07 v3.14}
 %   \item \xpackage{kvoptions-patch} is not compatible with a
 %     \LaTeX\ 2020-10-01 or newer and so it will abort loading if it detects it.
+%   \end{Version}
+%   \begin{Version}{2022-06-15 v3.15}
+%   \item Remove only the key from the \cs{@unusedoptionlist}
 %   \end{Version}
 % \end{History}
 %
