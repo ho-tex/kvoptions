@@ -13,7 +13,7 @@ tdslocations={
 "doc/latex/kvoptions/example-mycolorsetup.sty"
 }
 
-packtdszip  = true
+packtdszip  = false
 
 maxprintline=10000
 checkruns = 2
