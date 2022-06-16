@@ -1,0 +1,9 @@
+\input{regression-test}
+\documentclass[set={a,b,c}]{article}
+\START
+\usepackage{kvoptions-test4}
+\END
+\begin{document}
+
+Test
+\end{document} 
