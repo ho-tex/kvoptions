@@ -56,7 +56,7 @@
 %    use A4 as paper format:
 %       \PassOptionsToClass{a4paper}{article}
 %
-%    Programm calls to get the documentation (example):
+%    Program calls to get the documentation (example):
 %       pdflatex kvoptions.dtx
 %       makeindex -s gind.ist kvoptions.idx
 %       pdflatex kvoptions.dtx
@@ -365,7 +365,7 @@ and the derived files
 % first \cs{setkeys} call are processed with the wrong
 % family. With key |setkeys|, the macro \cs{kvsetkeys}
 % can be set that does not have the problem of the
-% original \cs{setkeys} of package {keyval}.
+% original \cs{setkeys} of package \xpackage{keyval}.
 %
 % Probably \cs{setkeys} of package \xpackage{xkeyval}
 % is safe in this respect. But I haven't made a full
@@ -529,7 +529,7 @@ and the derived files
 % Inside packages, typical default actions are to pass unknown
 % options to another package. Or an error message can be thrown
 % by \cs{@unknownoptionerror}. This is the original error
-% message that \LaTeX\ gives for unkown package options.
+% message that \LaTeX\ gives for unknown package options.
 % This error message is easier to understand for the user
 % than the error message from package \xpackage{keyval} that
 % is given otherwise.
@@ -1417,7 +1417,7 @@ and the derived files
       You are inside %
       \ifx\@currext\@clsextension class\else package\fi\space
       `\@currname.\@currext'.\MessageBreak
-      `\KVO@family' is used as familiy %
+      `\KVO@family' is used as family %
       for the keyval options.\MessageBreak
       `\KVO@prefix' serves as prefix %
       for internal switch macros.\MessageBreak
@@ -3074,7 +3074,7 @@ and the derived files
 %   \end{Version}
 %   \begin{Version}{2010/07/23 v3.8}
 %   \item
-%     Documenation for package \xpackage{kvoptions-patch} improved.
+%     Documentation for package \xpackage{kvoptions-patch} improved.
 %     No code changes.
 %   \end{Version}
 %   \begin{Version}{2010/12/02 v3.9}
